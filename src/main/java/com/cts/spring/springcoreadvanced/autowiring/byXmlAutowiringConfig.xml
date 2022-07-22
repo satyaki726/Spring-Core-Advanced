@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:c="http://www.springframework.org/schema/c"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd">
+
+	<bean name="address1"
+		class="com.cts.spring.springcoreadvanced.autowiring.Address"
+		p:hno="122" p:street="m" p:city="Kolkata" />
+	<bean name="address"
+		class="com.cts.spring.springcoreadvanced.autowiring.Address"
+		p:hno="122" p:street="MM" p:city="Kolkata" />
+	<bean name="department"
+		class="com.cts.spring.springcoreadvanced.autowiring.Department"
+		p:dId="12" p:sId="13"/>
+	
+	<bean name="employee"
+		class="com.cts.spring.springcoreadvanced.autowiring.Employee"
+		autowire="constructor"/>
+	<!--
+	<bean name="employee"
+		class="com.cts.spring.springcoreadvanced.autowiring.Employee"
+		autowire="byName" />
+	 -->
+    <!--
+    <bean name="employee"
+		class="com.cts.spring.springcoreadvanced.autowiring.Employee"
+		autowire="byType" /> 
+     -->
+
+</beans>
